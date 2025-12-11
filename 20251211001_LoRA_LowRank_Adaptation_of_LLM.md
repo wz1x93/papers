@@ -32,6 +32,8 @@ $$
 > **推理阶段**：可将 $\Delta W = BA$ 显式合并到 $W_0$ 中，得到新权重 $W$，**不引入任何额外计算或延迟**。
 
 ```
+https://github.com/jingyaogong/minimind/blob/master/model/model_lora.py
+
 # 定义Lora网络结构
 class LoRA(nn.Module):
     def __init__(self, in_features, out_features, rank):
