@@ -31,6 +31,38 @@ $$
 > **训练阶段**：冻结 $W_0$，仅训练 $A$ 和 $B$。  
 > **推理阶段**：可将 $\Delta W = BA$ 显式合并到 $W_0$ 中，得到新权重 $W$，**不引入任何额外计算或延迟**。
 
+```
+# 定义Lora网络结构
+class LoRA(nn.Module):
+    def __init__(self, in_features, out_features, rank):
+        super().__init__()
+        self.rank = rank  # LoRA的秩（rank），控制低秩矩阵的大小
+        self.A = nn.Linear(in_features, rank, bias=False)  # 低秩矩阵A
+        self.B = nn.Linear(rank, out_features, bias=False)  # 低秩矩阵B
+        # 矩阵A高斯初始化
+        self.A.weight.data.normal_(mean=0.0, std=0.02)
+        # 矩阵B全0初始化
+        self.B.weight.data.zero_()
+
+    def forward(self, x):
+        return self.B(self.A(x))
+
+
+def apply_lora(model, rank=8):
+    for name, module in model.named_modules():
+        if isinstance(module, nn.Linear) and module.weight.shape[0] == module.weight.shape[1]:
+            lora = LoRA(module.weight.shape[0], module.weight.shape[1], rank=rank).to(model.device)
+            setattr(module, "lora", lora)
+            original_forward = module.forward
+
+            # 显式绑定
+            def forward_with_lora(x, layer1=original_forward, layer2=lora):
+                return layer1(x) + layer2(x)
+
+            module.forward = forward_with_lora
+
+```
+
 ---
 
 ### 3. 应用位置与初始化
