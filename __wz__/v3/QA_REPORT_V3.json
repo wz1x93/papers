@@ -1,0 +1,27 @@
+{
+  "version": "V3",
+  "status": "PASS",
+  "slides": 25,
+  "main_slides": 19,
+  "appendix_slides": 6,
+  "main_minutes": 18.1,
+  "native_editable_diagrams": true,
+  "pptx_embedded_raster_images": 0,
+  "notes_pages": 25,
+  "pdf_pages": 25,
+  "objects": 825,
+  "errors": [],
+  "office_rendering": "Not available; PNG/PDF share the measured scene; PowerPoint-native render still unverified.",
+  "industry_slides": [
+    3,
+    4
+  ],
+  "samsung_slide": 5,
+  "competitive_landscape_slide": 6,
+  "necessity_slide": 7,
+  "new_sources": 10,
+  "total_sources": 23,
+  "external_hyperlinks": 32,
+  "citation_errors": [],
+  "fact_vs_analysis": "company-reported production, certification, R&D and strategic inference explicitly distinguished"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "V2 / full editorial redesign",
+  "status": "PASS",
+  "slides": 19,
+  "main_slides": 15,
+  "appendix_slides": 4,
+  "main_minutes": 13.2,
+  "native_editable_diagrams": true,
+  "pptx_embedded_raster_images": 0,
+  "notes_pages": 19,
+  "pdf_pages": 19,
+  "objects": 644,
+  "errors": [],
+  "office_rendering": "Not available; PNG/PDF share the measured scene; PowerPoint-native render still unverified."
+}

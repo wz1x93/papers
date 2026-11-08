@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "slides": 23,
+  "main_slides": 18,
+  "appendix_slides": 5,
+  "main_speaking_minutes": 15.4,
+  "scene_objects": 758,
+  "xml_parts_validated": 68,
+  "notes_pages": 23,
+  "embedded_raster_images_in_pptx": 0,
+  "pdf_pages": 23,
+  "editable_native_shapes": true,
+  "font": "Microsoft YaHei",
+  "missing_font_glyphs": [],
+  "layout_checks": [
+    "all shapes within slide bounds",
+    "all text measured and wrapped explicitly",
+    "no text box height overflow",
+    "font glyph coverage",
+    "PPTX reload and XML parse",
+    "one notes page per slide",
+    "PDF page count matches PPTX"
+  ],
+  "errors": [],
+  "warnings": [],
+  "rendering_limitation": "PNG and vector PDF rendered from shared scene, not through Microsoft PowerPoint/LibreOffice. Final Office-native rendering has not been tested.",
+  "outputs": {
+    "pptx_bytes": 136949,
+    "pdf_bytes": 629820
+  },
+  "claims": {
+    "15_percent": "proposed target, not measured",
+    "capacity_80GB": "illustrative only",
+    "three_year_plan": "proposed, not corporate commitment"
+  }
+}
